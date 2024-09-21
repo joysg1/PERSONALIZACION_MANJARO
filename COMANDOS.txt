@@ -1,0 +1,9 @@
+++ INSTALAR VENTOY
+
+git clone https://aur.archlinux.org/ventoy-bin.git
+
+git clone https://aur.archlinux.org/ventoy-bin.git
+
+cd ventoy-bin
+
+makepkg -si
