@@ -7,3 +7,10 @@ git clone https://aur.archlinux.org/ventoy-bin.git
 cd ventoy-bin
 
 makepkg -si
+
+
+++ ACTUALIZACIONES
+
+sudo pacman -Syu
+yay -S visual-studio-code-bin
+yay -S google-chrome
