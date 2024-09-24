@@ -14,3 +14,7 @@ makepkg -si
 sudo pacman -Syu
 yay -S visual-studio-code-bin
 yay -S google-chrome
+
+
+++ ICONS 
+https://www.xfce-look.org/browse?cat=132&ord=latest
