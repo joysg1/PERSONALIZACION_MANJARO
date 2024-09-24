@@ -16,5 +16,13 @@ yay -S visual-studio-code-bin
 yay -S google-chrome
 
 
-++ ICONS 
+++ ICONS (DESKTOP)
 https://www.xfce-look.org/browse?cat=132&ord=latest
+
+
+++ ICONS (START BUTTON)
+https://icons8.com/icons/set/start-button
+
+
+++ WALLPAPERS 
+https://www.wallpaperflare.com/search?wallpaper=minimalist
