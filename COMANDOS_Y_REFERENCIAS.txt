@@ -43,3 +43,6 @@ pamac list -o
 ++ PAQUETES HUERFANOS (REMOVER)
 pamac remove -o
 
+++ OBTENER PAQUETES Y CONSTRUIR DEPENDENCIAS
+makepkg -s PKGBUILD
+
