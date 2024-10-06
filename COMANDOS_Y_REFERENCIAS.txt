@@ -49,3 +49,7 @@ makepkg -s PKGBUILD
 ++ INSTALAR PIP
 sudo pacman -S python-pip
 
+++ INSTALAR LIBRERIAS DE PYTHON
+pip install <nombre_libreria> --break-system-packagas
+
+
