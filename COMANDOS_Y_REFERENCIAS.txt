@@ -1,5 +1,4 @@
 ++ INSTALAR VENTOY
-
 git clone https://aur.archlinux.org/ventoy-bin.git
 git clone https://aur.archlinux.org/ventoy-bin.git
 cd ventoy-bin
@@ -7,9 +6,12 @@ makepkg -si
 
 
 ++ ACTUALIZACIONES
-
 sudo pacman -Syu
+
+++ INSTALAR VISUAL STUDIO CODE
 yay -S visual-studio-code-bin
+
+++ INSTALAR google chrome
 yay -S google-chrome
 
 
