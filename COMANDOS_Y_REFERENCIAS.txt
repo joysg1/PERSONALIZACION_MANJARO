@@ -1,11 +1,8 @@
 ++ INSTALAR VENTOY
 
 git clone https://aur.archlinux.org/ventoy-bin.git
-
 git clone https://aur.archlinux.org/ventoy-bin.git
-
 cd ventoy-bin
-
 makepkg -si
 
 
@@ -27,12 +24,15 @@ https://icons8.com/icons/set/start-button
 ++ WALLPAPERS 
 https://www.wallpaperflare.com/search?wallpaper=minimalist
 
+
 ++ QUITAR PAQUETE
 pamac remove <nomb_paquete>
 sudo pacman -Rns <nomb_paquete>
 
+
 ++ ACTUALIZAR PAQUETE
 pamac upgrade <nomb_paquete>
+
 
 ++ INSTALAR PAQUETE
 sudo pacman -Syu <nomb_paquete>
@@ -40,23 +40,29 @@ sudo pacman -Syu <nomb_paquete>
 ++ PAQUETES HUERFANOS (VERIFICAR)
 pamac list -o
 
+
 ++ PAQUETES HUERFANOS (REMOVER)
 pamac remove -o
+
 
 ++ OBTENER PAQUETES Y CONSTRUIR DEPENDENCIAS
 makepkg -s PKGBUILD
 
+
 ++ INSTALAR PIP
 sudo pacman -S python-pip
 
+
 ++ INSTALAR LIBRERIAS DE PYTHON
 pip install <nombre_libreria> --break-system-packagas
+
 
 ++ INSTALAR ANDROID STUDIO
 sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install android-studio --classic
+
 
 ++ INSTALAR OBS STUDIO
 sudo pacman -Syu
