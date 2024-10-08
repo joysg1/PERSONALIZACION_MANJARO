@@ -57,3 +57,11 @@ sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install android-studio --classic
+
+++ INSTALAR OBS STUDIO
+sudo pacman -Syu
+sudo pacman -S base-devel
+sudo pacman -S flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.obsproject.Studio
+flatpak run com.obsproject.Studio
