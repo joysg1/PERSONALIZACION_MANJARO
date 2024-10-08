@@ -90,7 +90,9 @@ nano bash.bashrc
 "Agregar al final" neofetch
 
 ++ INSTALAR VIRTUALBOX
-sudo pacman -Syu virtualbox linux66-virtualbox-host-modules
+mhwd-kernel -l
+sudo pacman -Syu virtualbox <kernel_version>-virtualbox-host-modules  #es recomedable usar un kernel no tan reciente ejemplo:
+sudo pacman -Syu virtualbox linux610-virtualbox-host-modules
 <reboot> or execute --->  sudo vboxreload
 pamac search --aur virtualbox-ext-oracle
 pamac build virtualbox-ext-<your-decision>
