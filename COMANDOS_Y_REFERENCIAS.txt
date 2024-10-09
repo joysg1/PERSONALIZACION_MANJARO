@@ -100,3 +100,7 @@ sudo gpasswd -a $USER vboxusers
 
 ++ INSTALAR FUENTES DE MICROSOFT
 ttf-ms-fonts <software gui manager>
+
+++ RECORDAR HABILITAR EL CORTAFUEGOS <buscarlo en la interfaz grafica>
+
+++ RECORDAR HABILITAR TIMESHIFT <buscarlo en la interfaz gráfica>
