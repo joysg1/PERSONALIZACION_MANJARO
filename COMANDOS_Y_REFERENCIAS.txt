@@ -97,3 +97,6 @@ sudo pacman -Syu virtualbox linux610-virtualbox-host-modules
 pamac search --aur virtualbox-ext-oracle
 pamac build virtualbox-ext-<your-decision>
 sudo gpasswd -a $USER vboxusers
+
+++ INSTALAR FUENTES DE MICROSOFT
+ttf-ms-fonts <software gui manager>
