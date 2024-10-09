@@ -104,3 +104,9 @@ ttf-ms-fonts <software gui manager>
 ++ RECORDAR HABILITAR EL CORTAFUEGOS <buscarlo en la interfaz grafica>
 
 ++ RECORDAR HABILITAR TIMESHIFT <buscarlo en la interfaz gráfica>
+
+++ INSTALAR STACER (Mantenimiento)
+sudo pacman -S qt5-tools
+ls /usr/lib/cmake/Qt5LinguistTools <validamos que existan los archivos vinculados>
+yay -Syyu stacer
+
