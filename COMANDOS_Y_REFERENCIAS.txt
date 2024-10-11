@@ -110,3 +110,9 @@ sudo pacman -S qt5-tools
 ls /usr/lib/cmake/Qt5LinguistTools <validamos que existan los archivos vinculados>
 yay -Syyu stacer
 
+++ LIMPIAR CACHE
+sudo pacman -Sc
+
+++ REMOVER DEPENDENCIAS (PAQUETES HUERFANOS)
+sudo pacman -Qdtq | pacman -Rs -
+
