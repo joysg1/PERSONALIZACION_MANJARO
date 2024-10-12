@@ -110,6 +110,12 @@ sudo pacman -S qt5-tools
 ls /usr/lib/cmake/Qt5LinguistTools <validamos que existan los archivos vinculados>
 yay -Syyu stacer
 
+++ INSTALAR CALCULADORA DE GNOME
+sudo pacman -S snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install gnome-calculator
+
 ++ LIMPIAR CACHE
 sudo pacman -Sc
 
