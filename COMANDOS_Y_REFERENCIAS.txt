@@ -131,3 +131,5 @@ sudo pacman -S bleachbit
 ++ INSTALAR YAY 
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
+++ INSTALAR CONKY MANAGER (BUSCARLO EN LA TIENDA)
+
