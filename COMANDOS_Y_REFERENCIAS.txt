@@ -122,3 +122,6 @@ sudo pacman -Sc
 ++ REMOVER DEPENDENCIAS (PAQUETES HUERFANOS)
 sudo pacman -Qdtq | pacman -Rs -
 
+++ INSTALAR KDENLIVE
+sudo pacman -S kdenlive
+
