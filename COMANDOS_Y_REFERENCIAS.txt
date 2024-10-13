@@ -133,3 +133,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 ++ INSTALAR CONKY MANAGER (BUSCARLO EN LA TIENDA)
 
+++ INSTAR QT5
+sudo pacman -Syyu
+sudo pacman -S qt5-charts
+
