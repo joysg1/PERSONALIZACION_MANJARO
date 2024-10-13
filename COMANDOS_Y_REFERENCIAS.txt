@@ -99,7 +99,7 @@ pamac build virtualbox-ext-<your-decision>
 sudo gpasswd -a $USER vboxusers
 
 ++ INSTALAR FUENTES DE MICROSOFT
-ttf-ms-fonts <software gui manager>
+ yay -S --noconfirm --quiet --needed ttf-ms-win11-auto
 
 ++ RECORDAR HABILITAR EL CORTAFUEGOS <buscarlo en la interfaz grafica>
 
