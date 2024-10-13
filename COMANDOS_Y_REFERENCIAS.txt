@@ -125,3 +125,6 @@ sudo pacman -Qdtq | pacman -Rs -
 ++ INSTALAR KDENLIVE
 sudo pacman -S kdenlive
 
+++ INSTALAR BLEACHBIT
+sudo pacman -S bleachbit
+
