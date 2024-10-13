@@ -1,4 +1,6 @@
 ++ INSTALAR VENTOY
+sudo pacman -Syyu
+sudo pacman -S qt5-charts
 git clone https://aur.archlinux.org/ventoy-bin.git
 git clone https://aur.archlinux.org/ventoy-bin.git
 cd ventoy-bin
@@ -107,6 +109,8 @@ yay -Syu --devel --timeupdate
 ++ RECORDAR HABILITAR TIMESHIFT <buscarlo en la interfaz gráfica>
 
 ++ INSTALAR STACER (Mantenimiento)
+sudo pacman -Syyu
+sudo pacman -S qt5-charts
 sudo pacman -S qt5-tools
 ls /usr/lib/cmake/Qt5LinguistTools <validamos que existan los archivos vinculados>
 yay -Syyu stacer
