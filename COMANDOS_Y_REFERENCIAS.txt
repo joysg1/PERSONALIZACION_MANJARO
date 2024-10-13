@@ -154,3 +154,6 @@ pip install tk --break-system-packages
 pip install bokeh --break-system-packages
 pip install scipy --break-system-packages
 
+++ INSTALAR TELEGRAM
+sudo pacman -S telegram-desktop
+
