@@ -138,7 +138,19 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 ++ INSTALAR CONKY MANAGER (BUSCARLO EN LA TIENDA)
 
-++ INSTAR QT5
+++ INSTALAR QT5
 sudo pacman -Syyu
 sudo pacman -S qt5-charts
+
+++ INSTALAR LIBRERIAS DE PYTHON
+sudo pacman -S python-pip
+pip install pandas --break-system-packages
+pip install numpy --break-system-packages
+pip install matplotlib --break-system-packages
+pip install seaborn --break-system-packages
+pip install plotly --break-system-packages
+pip install pygame --break-system-packages
+pip install tk --break-system-packages
+pip install bokeh --break-system-packages
+pip install scipy --break-system-packages
 
