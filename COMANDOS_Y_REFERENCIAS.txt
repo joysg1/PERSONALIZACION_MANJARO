@@ -158,3 +158,9 @@ pip install scikit-learn --break-system-packages
 ++ INSTALAR TELEGRAM
 sudo pacman -S telegram-desktop
 
+++ INSTALAR OPERA
+sudo pacman -S snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install opera
+
