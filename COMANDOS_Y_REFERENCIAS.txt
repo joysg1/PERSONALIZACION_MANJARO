@@ -167,3 +167,4 @@ sudo snap install opera
 ++ INSTALAR LIBRE OFFICE
 sudo pacman -Syu libreoffice-fresh
 
+++ RECORDAR HABILITAR ORIGENES EXTERNOS (SOFTWARE MANAGER)
