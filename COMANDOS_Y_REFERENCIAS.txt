@@ -168,3 +168,14 @@ sudo snap install opera
 sudo pacman -Syu libreoffice-fresh
 
 ++ RECORDAR HABILITAR ORIGENES EXTERNOS (SOFTWARE MANAGER)
+
+++ INSTALAR NOTEPAD ++
+sudo pacman -S snapd
+sudo systemctl enable --now snapd.socket
+sudo snap install notepad-plus-plus
+
+++ INSTALAR SQLte Browser
+sudo pacman -S snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install sqlitebrowser
