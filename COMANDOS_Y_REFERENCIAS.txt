@@ -179,3 +179,40 @@ sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install sqlitebrowser
+
+++ INSTALAR ATOM 
+sudo pacman -S atom
+
+++ INSTALAR NETBEANS
+sudo pacman -S netbeans
+
+++ INSTALAR SUBLIME TEXT
+yay -S sublime-text
+
+++ INSTALAR ETCHER
+sudo pacman -S etcher
+
+++ INSTALAR UNETBOOTIN
+yay -S unetbootin
+
+++ INSTALAR GIMP
+sudo pacman -S gimp
+
+++ INSTALAR SHOTCUT
+sudo pacman -S shotcut
+
+++ INSTALAR PENCIL2D
+sudo pacman -S pencil2d
+
+++ INSTALAR ARK
+sudo pacman -S ark
+
+++ INSTALAR VMWARE WORKSTATION PLAYER
+yay -S --noconfirm --needed vmware-workstation
+
+++ INSTALAR GEDIT
+sudo pacman -S gedit
+
+++ INSTALAR LEAFPAD
+sudo pacman -S leafpad
+
