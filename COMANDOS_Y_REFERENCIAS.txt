@@ -6,6 +6,10 @@ git clone https://aur.archlinux.org/ventoy-bin.git
 cd ventoy-bin
 makepkg -si
 
+------------
+
+sudo pacman -S ventoy
+
 
 ++ ACTUALIZACIONES
 sudo pacman -Syu
