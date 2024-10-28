@@ -246,3 +246,6 @@ sudo snap install formatlab
 sudo rm -f /var/lib/pacman/sync/*
 sudo pacman-mirrors --continent
 sudo pacman -Syyu
+
+----
+Nota: este error se origina al tratar de actualizar utilizando el gestor de actualizaciones gráfico, por ende se debe obviar su uso
