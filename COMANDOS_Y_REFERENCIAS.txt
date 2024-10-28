@@ -201,7 +201,8 @@ sudo pacman -S netbeans
 yay -S sublime-text
 
 ++ INSTALAR ETCHER
-sudo pacman -S etcher
+sudo pacman -S yay
+yay -S etcher
 
 ++ INSTALAR UNETBOOTIN
 yay -S unetbootin
