@@ -158,6 +158,7 @@ pip install tk --break-system-packages
 pip install bokeh --break-system-packages
 pip install scipy --break-system-packages
 pip install scikit-learn --break-system-packages
+pip install pyinstaller --break-system-packages 
 
 ++ INSTALAR TELEGRAM
 sudo pacman -S telegram-desktop
