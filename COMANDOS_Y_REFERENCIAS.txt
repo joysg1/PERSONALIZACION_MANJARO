@@ -238,4 +238,7 @@ sudo snap install formatlab
 
 ++ INSTALAR SimpleScreenRecorder (buscarlo en la tienda)
 
-
+++ SOLUCIÓN ERROR EN BASE DE DATOS AL SINCRONIZAR
+sudo rm -f /var/lib/pacman/sync/*
+sudo pacman-mirrors --continent
+sudo pacman -Syyu
