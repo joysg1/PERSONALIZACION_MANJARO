@@ -191,6 +191,9 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install atom-fusion --beta
 
+------
+Buscar la version normal en la tienda
+
 ++ INSTALAR NETBEANS
 sudo pacman -S netbeans
 
