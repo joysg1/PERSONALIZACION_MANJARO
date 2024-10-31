@@ -249,3 +249,6 @@ sudo pacman -Syyu
 
 ----
 Nota: este error se origina al tratar de actualizar utilizando el gestor de actualizaciones gráfico, por ende se debe obviar su uso
+
+++ MOSTRAR LA VERSION DEL KERNEL
+uname -r
