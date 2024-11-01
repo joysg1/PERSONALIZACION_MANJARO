@@ -252,3 +252,6 @@ Nota: este error se origina al tratar de actualizar utilizando el gestor de actu
 
 ++ MOSTRAR LA VERSION DEL KERNEL
 uname -r
+
+++ INSTALAR BRASERO
+sudo pacman -S brasero
