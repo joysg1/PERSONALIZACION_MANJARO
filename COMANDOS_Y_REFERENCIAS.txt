@@ -259,3 +259,6 @@ sudo pacman -S brasero
 ++ INSTALAR GNOME DISK UTILITY
 sudo pacman -S  gnome-disk-utility
 
+++ RUTA DE LOS ICONOS
+/usr/share/icons
+
