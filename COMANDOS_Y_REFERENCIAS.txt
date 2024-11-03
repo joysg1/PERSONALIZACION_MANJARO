@@ -100,6 +100,8 @@ mhwd-kernel -l
 sudo pacman -Syu virtualbox <kernel_version>-virtualbox-host-modules  #es recomedable usar un kernel no tan reciente ejemplo:
 sudo pacman -Syu virtualbox linux610-virtualbox-host-modules
 <reboot> or execute --->  sudo vboxreload
+sudo pacman -Syu
+sudo pacman -S virtualbox
 pamac search --aur virtualbox-ext-oracle
 pamac build virtualbox-ext-<your-decision>
 sudo gpasswd -a $USER vboxusers
