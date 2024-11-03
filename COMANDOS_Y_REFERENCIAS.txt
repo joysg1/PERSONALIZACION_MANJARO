@@ -264,3 +264,10 @@ sudo pacman -S  gnome-disk-utility
 ++ RUTA DE LOS ICONOS
 /usr/share/icons
 
+++ INSTALAR WHATSAPP
+sudo pacman -Sy base-devel git
+git clone https://aur.archlinux.org/whatsapp-for-linux.git
+cd whatsapp-for-linux
+makepkg -is
+whatsapp-for-linux
+
