@@ -171,8 +171,8 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install opera
 
-++ INSTALAR LIBRE OFFICE
-sudo pacman -Syu libreoffice-fresh
+++ INSTALAR LIBRE OFFICE (ESPAÑOL)
+sudo pacman -S libreoffice-fresh libreoffice-es
 
 ++ RECORDAR HABILITAR ORIGENES EXTERNOS (SOFTWARE MANAGER)
 
