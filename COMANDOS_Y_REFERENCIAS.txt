@@ -15,11 +15,14 @@ sudo pacman -S ventoy
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+
 ++ INSTALAR VISUAL STUDIO CODE
 yay -S visual-studio-code-bin
 
+
 ++ INSTALAR google chrome
 yay -S google-chrome
+
 
 ++ INSTALAR MSTEAMS
 sudo pacman -S snapd
@@ -51,6 +54,7 @@ pamac upgrade <nomb_paquete>
 
 ++ INSTALAR PAQUETE
 sudo pacman -Syu <nomb_paquete>
+
 
 ++ PAQUETES HUERFANOS (VERIFICAR)
 pamac list -o
@@ -87,6 +91,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub com.obsproject.Studio
 flatpak run com.obsproject.Studio
 
+
 ++ INSTALAR NEOFETCH
 sudo pacman -S neofetch
 neofetch
@@ -94,6 +99,7 @@ sudo su
 /etc/bash.bashrc
 nano bash.bashrc
 "Agregar al final" neofetch
+
 
 ++ INSTALAR VIRTUALBOX
 mhwd-kernel -l
@@ -106,13 +112,17 @@ pamac search --aur virtualbox-ext-oracle
 pamac build virtualbox-ext-<your-decision>
 sudo gpasswd -a <user> vboxusers
 
+
 ++ INSTALAR FUENTES DE MICROSOFT
 yay -S ttf-ms-fonts
 yay -Syu --devel --timeupdate
 
+
 ++ RECORDAR HABILITAR EL CORTAFUEGOS <buscarlo en la interfaz grafica>
 
+
 ++ RECORDAR HABILITAR TIMESHIFT <buscarlo en la interfaz gráfica>
+
 
 ++ INSTALAR STACER (Mantenimiento)
 sudo pacman -Syyu
@@ -121,23 +131,29 @@ sudo pacman -S qt5-tools
 ls /usr/lib/cmake/Qt5LinguistTools <validamos que existan los archivos vinculados>
 yay -Syyu stacer
 
+
 ++ INSTALAR CALCULADORA DE GNOME
 sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install gnome-calculator
 
+
 ++ LIMPIAR CACHE
 sudo pacman -Sc
+
 
 ++ REMOVER DEPENDENCIAS (PAQUETES HUERFANOS)
 sudo pacman -Qdtq | pacman -Rs -
 
+
 ++ INSTALAR KDENLIVE
 sudo pacman -S kdenlive
 
+
 ++ INSTALAR BLEACHBIT
 sudo pacman -S bleachbit
+
 
 ++ INSTALAR YAY 
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
@@ -162,8 +178,10 @@ pip install scipy --break-system-packages
 pip install scikit-learn --break-system-packages
 pip install pyinstaller --break-system-packages 
 
+
 ++ INSTALAR TELEGRAM
 sudo pacman -S telegram-desktop
+
 
 ++ INSTALAR OPERA
 sudo pacman -S snapd
@@ -171,15 +189,19 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install opera
 
+
 ++ INSTALAR LIBRE OFFICE (ESPAÑOL)
 sudo pacman -S libreoffice-fresh libreoffice-es
 
+
 ++ RECORDAR HABILITAR ORIGENES EXTERNOS (SOFTWARE MANAGER)
+
 
 ++ INSTALAR NOTEPAD ++
 sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo snap install notepad-plus-plus
+
 
 ++ INSTALAR SQLte Browser
 sudo pacman -S snapd
@@ -187,11 +209,13 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install sqlitebrowser
 
+
 ++ INSTALAR ATOM 
 sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install atom-fusion --beta
+
 
 -------------
 Nota: Buscar la version normal en la tienda o instalarlo desde la web (archivo tar)
@@ -199,21 +223,27 @@ Nota: Buscar la version normal en la tienda o instalarlo desde la web (archivo t
 ++ INSTALAR NETBEANS
 sudo pacman -S netbeans
 
+
 ++ INSTALAR SUBLIME TEXT
 yay -S sublime-text
+
 
 ++ INSTALAR ETCHER
 sudo pacman -S yay
 yay -S etcher
 
+
 ++ INSTALAR UNETBOOTIN
 yay -S unetbootin
+
 
 ++ INSTALAR GIMP
 sudo pacman -S gimp
 
+
 ++ INSTALAR SHOTCUT
 sudo pacman -S shotcut
+
 
 ++ INSTALAR PENCIL2D
 sudo pacman -S pencil2d
@@ -221,14 +251,18 @@ sudo pacman -S pencil2d
 ++ INSTALAR ARK
 sudo pacman -S ark
 
+
 ++ INSTALAR VMWARE WORKSTATION PLAYER
 yay -S --noconfirm --needed vmware-workstation
+
 
 ++ INSTALAR GEDIT
 sudo pacman -S gedit
 
+
 ++ INSTALAR LEAFPAD
 sudo pacman -S leafpad
+
 
 ++ INSTALAR YOUTUBE-DL
 sudo pacman -S snapd
@@ -236,33 +270,42 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install youtube-dl
 
+
 ++ INSTALAR 4K VIDEO CONVERTER
 sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install formatlab
 
+
 ++ INSTALAR SimpleScreenRecorder (buscarlo en la tienda)
+
 
 ++ SOLUCIÓN ERROR EN BASE DE DATOS AL SINCRONIZAR
 sudo rm -f /var/lib/pacman/sync/*
 sudo pacman-mirrors --continent
 sudo pacman -Syyu
 
+
 -----------
 Nota: este error se origina al tratar de actualizar utilizando el gestor de actualizaciones gráfico, por ende se debe obviar su uso
+
 
 ++ MOSTRAR LA VERSION DEL KERNEL
 uname -r
 
+
 ++ INSTALAR BRASERO
 sudo pacman -S brasero
+
 
 ++ INSTALAR GNOME DISK UTILITY
 sudo pacman -S  gnome-disk-utility
 
+
 ++ RUTA DE LOS ICONOS
 /usr/share/icons (Recordar para instalar temas)
+
 
 ++ INSTALAR WHATSAPP
 sudo pacman -Sy base-devel git
