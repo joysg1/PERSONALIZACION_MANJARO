@@ -164,9 +164,11 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 ++ INSTALAR CONKY MANAGER (BUSCARLO EN LA TIENDA)
 
+
 ++ INSTALAR QT5
 sudo pacman -Syyu
 sudo pacman -S qt5-charts
+
 
 ++ INSTALAR LIBRERIAS DE PYTHON
 sudo pacman -S python-pip
@@ -223,6 +225,7 @@ sudo snap install atom-fusion --beta
 
 -------------
 Nota: Buscar la version normal en la tienda o instalarlo desde la web (archivo tar)
+
 
 ++ INSTALAR NETBEANS
 sudo pacman -S netbeans
