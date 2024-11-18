@@ -321,3 +321,6 @@ cd whatsapp-for-linux
 makepkg -is
 whatsapp-for-linux
 
+++ BUSQUEDA DE MAS SNAPS
+https://snapcraft.io/
+
