@@ -321,6 +321,12 @@ cd whatsapp-for-linux
 makepkg -is
 whatsapp-for-linux
 
+++ INSTALAR WEKA
+sudo pacman -S snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install weka
+
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
 
