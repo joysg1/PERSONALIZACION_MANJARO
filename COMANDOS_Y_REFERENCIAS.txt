@@ -332,6 +332,13 @@ sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install weka
 
 
+++ INSTALAR GIT LFS
+sudo pacman -S git-lfs
+git lfs install
+git lfs track “.fileextension”
+git add filename.fileextension
+
+
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
 
