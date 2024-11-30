@@ -205,7 +205,7 @@ sudo pacman -S libreoffice-fresh libreoffice-es
 ++ RECORDAR HABILITAR ORIGENES EXTERNOS (SOFTWARE MANAGER)
 
 
-++ INSTALAR NOTEPAD ++
+++ INSTALAR NOTEPAD 
 sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo snap install notepad-plus-plus
@@ -330,6 +330,7 @@ sudo pacman -S snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install weka
+
 
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
