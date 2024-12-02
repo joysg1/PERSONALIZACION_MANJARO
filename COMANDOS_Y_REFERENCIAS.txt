@@ -341,6 +341,9 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
+++ INSTALAR KERNEL 6.6 (LTS)
+Realizarlo desde el gestor de configuración de manjaro (GUI)
+
 
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
