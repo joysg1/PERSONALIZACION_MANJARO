@@ -1,13 +1,4 @@
 ++ INSTALAR VENTOY
-sudo pacman -Syyu
-sudo pacman -S qt5-charts
-git clone https://aur.archlinux.org/ventoy-bin.git
-git clone https://aur.archlinux.org/ventoy-bin.git
-cd ventoy-bin
-makepkg -si
-
------------------------------------------------------------------
-Nota: metodo mas directo
 sudo pacman -S ventoy
 
 
