@@ -147,6 +147,7 @@ sudo pacman -Qdtq | pacman -Rs -
 
 
 ++ INSTALAR KDENLIVE
+sudo pacman -S poppler-glib
 sudo pacman -S kdenlive
 
 
