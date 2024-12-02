@@ -330,6 +330,13 @@ git lfs track “.fileextension”
 git add filename.fileextension
 
 
+++ INSTALAR PARU
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
 
