@@ -125,7 +125,10 @@ sudo pacman -S qt5-charts
 sudo pacman -S qt5-tools
 ls /usr/lib/cmake/Qt5LinguistTools <validamos que existan los archivos vinculados>
 yay -Syyu stacer
-paru -S stacer <metodo_alternativo>
+
+<metodo_alternativo haber instalado antes paru>
+sudo pacman -S libpamac
+paru -S stacer 
 
 
 ++ INSTALAR CALCULADORA DE GNOME
