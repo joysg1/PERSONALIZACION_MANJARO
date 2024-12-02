@@ -111,6 +111,7 @@ sudo pacman -S virtualbox
 pamac search --aur virtualbox-ext-oracle
 pamac build virtualbox-ext-<your-decision>
 sudo gpasswd -a <user> vboxusers
+sudo usermod -aG vboxusers tu_usuario
 
 -------------------------------------------------------------------------------------------
 Nota: por el momento no instalar virtualbox nov. 2024 (temas de kernel equipo: llt)
