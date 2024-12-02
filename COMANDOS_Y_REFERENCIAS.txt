@@ -353,6 +353,10 @@ Realizarlo desde el gestor de configuración de manjaro (GUI)
 --- Nota: una vez instalado el kernel el mismo se selecciona reiniciando apretando ESC, opciones avanzadas y seleccionado el nuevo kernerl. Una vez seleccionado este será la opción predilecta al iniciarse nuevamente el sistema. 
 
 
+++ INSTALAR OKULAR
+sudo snap install okular
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
