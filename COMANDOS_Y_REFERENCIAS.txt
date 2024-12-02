@@ -345,6 +345,10 @@ makepkg -si
 Realizarlo desde el gestor de configuración de manjaro (GUI)
 
 
+++ REFRESCAR LLAVES
+sudo pacman-key --refresh-keys
+
+
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
 
