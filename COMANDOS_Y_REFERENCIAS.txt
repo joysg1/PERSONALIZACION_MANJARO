@@ -343,6 +343,7 @@ makepkg -si
 
 ++ INSTALAR KERNEL 6.6 (LTS)
 Realizarlo desde el gestor de configuración de manjaro (GUI)
+--- Nota: una vez instalado el kernel el mismo se selecciona reiniciando apretando ESC, opciones avanzadas y seleccionado el nuevo kernerl. Una vez seleccionado este será la opción predilecta al iniciarse nuevamente el sistema. 
 
 
 ++ REFRESCAR LLAVES
