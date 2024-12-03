@@ -363,6 +363,14 @@ sudo snap install okular
 sudo snap install arduino
 
 
+++ INSTALAR GNS3
+pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+yay -S qemu docker vpcs dynamips libvirt ubridge inetutils
+yay -S gns3-server gns3-gui 
+
 
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
