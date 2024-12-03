@@ -411,20 +411,22 @@ yay -S kalzium
 yay -S kmplot
 
 
-++ INSTALAR GCHEMPAINT
-Bajar el paquete de la pagina: https://www.nongnu.org/gchempaint/
-
-
-++ REFRESCAR LLAVES
-sudo pacman-key --refresh-keys
-
-
 ++ INSTALAR KAZAM
 yay -S kazam
 
 
 ++ INSTALAR CELESTIA
 yay -S celestia
+
+
+++ INSTALAR JDOWNLOADER
+Bajar el script desde la pagina: https://jdownloader.org/download/index
+
+++ REFRESCAR LLAVES
+sudo pacman-key --refresh-keys
+
+
+
 
 
 ++ BUSQUEDA DE MAS SNAPS
