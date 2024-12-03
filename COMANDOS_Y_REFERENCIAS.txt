@@ -419,10 +419,17 @@ Bajar el paquete de la pagina: https://www.nongnu.org/gchempaint/
 sudo pacman-key --refresh-keys
 
 
+++ INSTALAR KAZAM
+yay -S kazam
+
+
+++ INSTALAR CELESTIA
+yay -S celestia
+
+
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
 
 
-++ INSTALAR KAZAM
-yay -S kazam
+
 
