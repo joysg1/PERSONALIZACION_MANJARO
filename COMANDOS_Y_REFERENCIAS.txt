@@ -378,6 +378,12 @@ https://flarexes.com/cisco-packet-tracer-installation-in-arch-os
 
 ++ INSTALAR NWIPE
 yay -S nwipe
+sudo nwipe <ejecutar>
+
+
+++ INSTALAR PHOTOREC
+sudo pacman -S testdisk
+sudo photorec <ejecutar>
 
 
 ++ REFRESCAR LLAVES
