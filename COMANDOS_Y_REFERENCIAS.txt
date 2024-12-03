@@ -372,6 +372,10 @@ yay -S qemu docker vpcs dynamips libvirt ubridge inetutils
 yay -S gns3-server gns3-gui 
 
 
+++ INSTALAR PACKET TRACER
+https://flarexes.com/cisco-packet-tracer-installation-in-arch-os
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
