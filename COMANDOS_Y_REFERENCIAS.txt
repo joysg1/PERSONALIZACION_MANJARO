@@ -325,6 +325,8 @@ git clone https://aur.archlinux.org/whatsapp-for-linux.git
 cd whatsapp-for-linux
 makepkg -is
 whatsapp-for-linux
+--- Version mas estable:
+sudo snap install whatsapp-linux-app
 
 
 ++ INSTALAR WEKA
