@@ -386,6 +386,11 @@ sudo pacman -S testdisk
 sudo photorec <ejecutar>
 
 
+++ INSTALAR CLONEZILLA
+sudo pacman -S clonezilla
+sudo clonezilla <ejecutar>
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
