@@ -422,6 +422,11 @@ yay -S celestia
 ++ INSTALAR JDOWNLOADER
 Bajar el script desde la pagina: https://jdownloader.org/download/index
 
+
+++ INSTALAR MARBLE
+yay -S marble
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
