@@ -391,6 +391,10 @@ sudo pacman -S clonezilla
 sudo clonezilla <ejecutar>
 
 
+++ INSTALAR Gscan2pdf
+sudo pacman -S gscan2pdf
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
