@@ -403,6 +403,10 @@ yay -S avogadro2
 yay -S fritzing
 
 
+++ INSTALAR KALZIUM
+yay -S kalzium
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
