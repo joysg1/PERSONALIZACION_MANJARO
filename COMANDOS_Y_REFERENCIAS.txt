@@ -338,7 +338,7 @@ sudo snap install weka
 
 ++ INSTALAR GIT LFS
 sudo pacman -S git-lfs
-git lfs install
+git lfs install <este comando inicia lfs en el directorio>
 git lfs track “.fileextension”
 git add filename.fileextension
 
