@@ -395,6 +395,10 @@ sudo clonezilla <ejecutar>
 sudo pacman -S gscan2pdf
 
 
+++ INSTALAR AVOGADRO
+yay -S avogadro2
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
