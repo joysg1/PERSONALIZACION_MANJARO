@@ -411,6 +411,10 @@ yay -S kalzium
 yay -S kmplot
 
 
+++ INSTALAR GCHEMPAINT
+Bajar el paquete de la pagina: https://www.nongnu.org/gchempaint/
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
