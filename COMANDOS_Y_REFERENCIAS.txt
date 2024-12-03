@@ -376,6 +376,10 @@ yay -S gns3-server gns3-gui
 https://flarexes.com/cisco-packet-tracer-installation-in-arch-os
 
 
+++ INSTALAR NWIPE
+yay -S nwipe
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
