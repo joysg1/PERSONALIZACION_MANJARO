@@ -422,3 +422,7 @@ sudo pacman-key --refresh-keys
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
 
+
+++ INSTALAR KAZAM
+yay -S kazam
+
