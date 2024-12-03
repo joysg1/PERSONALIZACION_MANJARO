@@ -407,6 +407,10 @@ yay -S fritzing
 yay -S kalzium
 
 
+++ INSTALAR KMPLOT
+yay -S kmplot
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
