@@ -359,6 +359,11 @@ Realizarlo desde el gestor de configuración de manjaro (GUI)
 sudo snap install okular
 
 
+++ INSTALAR ARDUINO
+sudo snap install arduino
+
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
