@@ -190,6 +190,7 @@ pip install imbalanced-learn --break-system-packages
 
 
 
+
 ++ INSTALAR TELEGRAM
 sudo pacman -S telegram-desktop
 
