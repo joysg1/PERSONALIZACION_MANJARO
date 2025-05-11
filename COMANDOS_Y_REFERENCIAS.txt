@@ -433,9 +433,6 @@ yay -S marble
 sudo pacman-key --refresh-keys
 
 
-
-
-
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
 
