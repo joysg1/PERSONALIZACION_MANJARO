@@ -189,6 +189,8 @@ pip install pyinstaller --break-system-packages
 pip install imbalanced-learn --break-system-packages 
 
 
+++ Comando para actualizar todas las librerias a la vez:
+pip list --outdated  | cut -d = -f 1 | xargs -n1 pip install -U --break-system-packages
 
 
 ++ INSTALAR TELEGRAM
