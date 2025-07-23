@@ -431,6 +431,10 @@ Bajar el script desde la pagina: https://jdownloader.org/download/index
 yay -S marble
 
 
+++ INSTALAR VMPLAYER WORKSTATION PLAYER
+ yay -S --noconfirm --needed vmware-workstation
+
+
 ++ REFRESCAR LLAVES
 sudo pacman-key --refresh-keys
 
