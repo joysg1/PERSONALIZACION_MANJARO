@@ -99,6 +99,7 @@ sudo su
 /etc/bash.bashrc
 nano bash.bashrc
 "Agregar al final" neofetch
+--- Metodo opcional: sudo snap install neofetch-desktop
 
 
 ++ INSTALAR VIRTUALBOX
