@@ -1,4 +1,3 @@
-
 ++ INSTALAR VENTOY
 sudo pacman -S ventoy
 
