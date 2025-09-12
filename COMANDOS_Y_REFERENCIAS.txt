@@ -433,6 +433,10 @@ Bajar el script desde la pagina: https://jdownloader.org/download/index
 yay -S marble
 
 
+++ INSTALAR VERACRYPT
+sudo pacman -S veracrypt
+
+
 ++ INSTALAR VMPLAYER WORKSTATION PLAYER
  yay -S --noconfirm --needed vmware-workstation
 
@@ -443,6 +447,8 @@ sudo pacman-key --refresh-keys
 
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
+
+
 
 
 
