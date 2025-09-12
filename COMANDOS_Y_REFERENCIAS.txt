@@ -435,6 +435,7 @@ yay -S marble
 
 ++ INSTALAR VERACRYPT
 sudo pacman -S veracrypt
+--- Manual de instalación y uso: https://idroot.us/install-veracrypt-manjaro/
 
 
 ++ INSTALAR VMPLAYER WORKSTATION PLAYER
