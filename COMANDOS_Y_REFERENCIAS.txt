@@ -191,6 +191,9 @@ pip install imbalanced-learn --break-system-packages
 pip install openpyxl --break-system-packages
 pip install nltk --break-system-packages
 pip install pillow --break-system-packages
+pip install wikipedia --break-system-packages
+pip install wolframalpha --break-system-packages
+pip3 install wxpython --break-system-packages
 
 
 ++ Comando para actualizar todas las librerias a la vez:
