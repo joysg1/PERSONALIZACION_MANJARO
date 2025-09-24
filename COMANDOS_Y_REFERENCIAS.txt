@@ -190,6 +190,7 @@ pip install pyinstaller --break-system-packages
 pip install imbalanced-learn --break-system-packages 
 pip install openpyxl --break-system-packages
 pip install nltk --break-system-packages
+pip install pillow --break-system-packages
 
 
 ++ Comando para actualizar todas las librerias a la vez:
