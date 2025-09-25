@@ -195,6 +195,7 @@ pip install wikipedia --break-system-packages
 pip install wolframalpha --break-system-packages
 pip3 install wxpython --break-system-packages
 yay -S python-espeak
+pip install pyttsx3 --break-system-packages
 
 
 ++ Comando para actualizar todas las librerias a la vez:
