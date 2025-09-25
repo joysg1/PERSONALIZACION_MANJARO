@@ -444,6 +444,9 @@ yay -S marble
 sudo pacman -S veracrypt
 --- Manual de instalación y uso: https://idroot.us/install-veracrypt-manjaro/
 
+++ INSTALAR ESPEAK
+pamac install espeak
+
 
 ++ INSTALAR VMPLAYER WORKSTATION PLAYER
  yay -S --noconfirm --needed vmware-workstation
