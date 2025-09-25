@@ -196,6 +196,7 @@ pip install wolframalpha --break-system-packages
 pip3 install wxpython --break-system-packages
 yay -S python-espeak
 pip install pyttsx3 --break-system-packages
+pip install xlrd>=2.0.1 --break-system-packages
 pip install SpeechRecognition==3.4.3 --break-system-packages  
 --- Nota: 
 ---- Antes instalar la siguiente dependencia: sudo pacman -S python-aifc
