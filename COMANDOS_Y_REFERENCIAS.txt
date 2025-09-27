@@ -11,6 +11,10 @@ sudo pacman -S ventoy
 sudo pacman -S gnome-screenshot
 
 
+++ INSTALAR XFCE4-SCREENSHOOTER
+sudo pacman -S xfce4-screenshooter
+
+
 ++ INSTALAR YAY 
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
