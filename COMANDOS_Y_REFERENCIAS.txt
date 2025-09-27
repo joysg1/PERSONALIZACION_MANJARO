@@ -7,6 +7,10 @@ sudo pacman -Syu && yay -Syu
 sudo pacman -S ventoy
 
 
+++ INSTALAR MINGW
+sudo pacman -S wine mingw-w64-gcc
+
+
 ++ INSTALAR GNOME-SCREENSHOT
 sudo pacman -S gnome-screenshot
 
