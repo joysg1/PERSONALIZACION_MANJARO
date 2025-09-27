@@ -1,10 +1,14 @@
+++ ACTUALIZACIONES
+sudo pacman -Syu
+sudo pacman -Syu && yay -Syu
+
+
 ++ INSTALAR VENTOY
 sudo pacman -S ventoy
 
 
-++ ACTUALIZACIONES
-sudo pacman -Syu
-sudo pacman -Syu && yay -Syu
+++ INSTALAR GNOME-SCREENSHOT
+sudo pacman -S gnome-screenshot
 
 
 ++ INSTALAR YAY 
