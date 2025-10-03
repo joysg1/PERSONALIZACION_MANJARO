@@ -2,6 +2,9 @@
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+++ INSTALAR FILEZILLA
+sudo pacman -S install filezilla 
+
 ++ INSTALAR DOCKER 
 --- wget https://download.docker.com/linux/static/stable/x86_64/docker-28.4.0.tgz -qO- | tar xvfz - docker/docker --strip-components=1
 --- cp -rp ./docker /usr/local/bin/ && rm -r ./docker
