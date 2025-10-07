@@ -2,6 +2,9 @@
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+++ INSTALAR DKMS
+sudo pacman -S dkms
+
 ++ INSTALAR FILEZILLA
 sudo pacman -S install filezilla 
 
