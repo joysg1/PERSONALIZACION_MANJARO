@@ -2,6 +2,9 @@
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+++ INSTALAR COWSAY 
+sudo pacman -S cowsay
+
 ++ INSTALAR DKMS
 sudo pacman -S dkms
 
