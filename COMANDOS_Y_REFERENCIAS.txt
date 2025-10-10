@@ -2,6 +2,9 @@
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+++ INSTALAR SSDEEP
+sudo pacman -S ssdeep
+
 ++ INSTALAR COWSAY 
 sudo pacman -S cowsay
 
