@@ -2,6 +2,10 @@
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+
+++ INSTALAR UFW (Firewall)
+sudo pacman -Syu ufw
+
 ++ INSTALAR SSDEEP
 sudo pacman -S ssdeep
 
