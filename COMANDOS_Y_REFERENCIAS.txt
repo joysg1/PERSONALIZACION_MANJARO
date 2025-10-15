@@ -6,7 +6,7 @@ sudo pacman -Syu && yay -Syu
 ++ INSTALAR UFW (Firewall)
 sudo pacman -Syu ufw
 
-++ INSTALAR SSDEEP
+++ INSTALAR SSDEEP (Fuzzy Hashing Tool)
 sudo pacman -S ssdeep
 
 ++ INSTALAR COWSAY 
