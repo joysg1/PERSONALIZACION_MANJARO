@@ -241,6 +241,7 @@ pip install psutil --break-system-packages
 pip install ucimlrepo --break-system-packages
 pip install bokeh --break-system-packages
 pip install altair --break-system-packages
+pip install streamlit
 pip install SpeechRecognition==3.4.3 --break-system-packages  
 --- Nota: 
 ---- Antes instalar la siguiente dependencia: sudo pacman -S python-aifc
