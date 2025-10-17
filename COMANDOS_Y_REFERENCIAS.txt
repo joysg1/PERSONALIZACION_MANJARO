@@ -245,6 +245,7 @@ pip install streamlit --break-system-packages
 pip install flask --break-system-packages
 pip install dash --break-system-packages
 pip install biopython --break-system-packages
+pip install pyserial --break-system-packages
 pip install SpeechRecognition==3.4.3 --break-system-packages  
 --- Nota: 
 ---- Antes instalar la siguiente dependencia: sudo pacman -S python-aifc
