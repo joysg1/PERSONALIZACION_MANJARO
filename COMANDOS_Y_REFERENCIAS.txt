@@ -3,6 +3,10 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR NANO 
+sudo pacman -S nano
+
+
 ++ INSTALAR UFW (Firewall)
 sudo pacman -Syu ufw
 
