@@ -3,6 +3,10 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR NIKTO
+sudo pacman -Syu nikto 
+
+
 ++ INSTALAR NETDISCOVER
 yay -S netdiscover
 
