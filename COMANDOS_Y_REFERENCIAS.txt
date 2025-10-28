@@ -3,6 +3,11 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR FIGLET
+sudo pacman -Syu figlet 
+Modo de uso: figlet <cadena> ---> Muestra dicha cadena en la terminal
+
+
 ++ INSTALAR NANO 
 sudo pacman -S nano
 
