@@ -3,6 +3,10 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR 7z
+sudo pacman -S p7zip
+
+
 ++ INSTALAR NIKTO
 sudo pacman -Syu nikto 
 
