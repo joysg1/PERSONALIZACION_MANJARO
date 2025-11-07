@@ -3,6 +3,10 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR TREE
+sudo pacman -S tree
+
+
 ++ INSTALAR 7z
 sudo pacman -S p7zip
 
