@@ -3,6 +3,10 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR ETHTOOL
+sudo pacman -Syu ethtool
+
+
 ++ INSTALAR TREE
 sudo pacman -S tree
 
