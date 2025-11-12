@@ -3,8 +3,11 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR TRACEROUTE
+sudo pacman -S traceroute
+
 ++ INSTALAR ETHTOOL
-sudo pacman -Syu ethtool
+sudo pacman -S ethtool
 
 
 ++ INSTALAR TREE
