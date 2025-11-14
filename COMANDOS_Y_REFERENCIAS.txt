@@ -2,6 +2,9 @@
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+++ INSTALAR IFTOP
+sudo pacman -S iftop
+
 
 ++ INSTALAR TRACEROUTE
 sudo pacman -S traceroute
