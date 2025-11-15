@@ -2,6 +2,11 @@
 sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
+
+++ INSTALAR PHP
+sudo pacman -S php
+
+
 ++ INSTALAR IFTOP
 sudo pacman -S iftop
 
