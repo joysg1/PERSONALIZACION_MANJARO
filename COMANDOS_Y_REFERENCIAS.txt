@@ -3,6 +3,10 @@ sudo pacman -Syu
 sudo pacman -Syu && yay -Syu
 
 
+++ INSTALAR PHP Y SQLITE
+sudo pacman -S php php-sqlite
+
+
 ++ INSTALAR SQLITE
 sudo pacman -S sqlite
 
