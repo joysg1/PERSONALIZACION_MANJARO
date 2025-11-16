@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Comandos Arch Linux/Manjaro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', 'Fira Code', monospace;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(30, 30, 46, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(137, 80, 252, 0.3);
+            overflow: hidden;
+            border: 1px solid #8950fc;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1793d1 0%, #1368a0 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        
+        .arch-icon {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            color: #a8e6cf;
+        }
+        
+        nav {
+            background: rgba(23, 147, 209, 0.95);
+            padding: 18px 0;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1368a0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 35px;
+            gap: 35px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(42, 42, 62, 0.8);
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid rgba(23, 147, 209, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .content {
+            flex: 3;
+            min-width: 320px;
+        }
+        
+        h2 {
+            color: #1793d1;
+            border-bottom: 3px solid #1793d1;
+            padding-bottom: 15px;
+            margin: 35px 0 25px;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: #4fc3f7;
+            margin: 28px 0 18px;
+            font-size: 1.4rem;
+        }
+        
+        .category {
+            margin-bottom: 45px;
+            background: rgba(42, 42, 62, 0.6);
+            padding: 28px;
+            border-radius: 12px;
+            border-left: 6px solid #1793d1;
+            transition: transform 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: translateX(5px);
+        }
+        
+        .command {
+            background: linear-gradient(135deg, rgba(42, 42, 62, 0.8) 0%, rgba(30, 30, 46, 0.8) 100%);
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 10px;
+            border-left: 5px solid #4fc3f7;
+            border: 1px solid rgba(79, 195, 247, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .command:hover {
+            border-color: #4fc3f7;
+            box-shadow: 0 6px 20px rgba(79, 195, 247, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .command code {
+            background: rgba(23, 147, 209, 0.1);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            color: #4fc3f7;
+            font-weight: bold;
+            border: 1px solid rgba(23, 147, 209, 0.2);
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .command-desc {
+            margin-top: 12px;
+            color: #a8e6cf;
+            line-height: 1.6;
+        }
+        
+        .sub-command {
+            margin-left: 28px;
+            background: rgba(30, 30, 46, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 8px;
+            border-left: 3px solid #a8e6cf;
+        }
+        
+        .sub-command code {
+            color: #a8e6cf;
+            background: rgba(168, 230, 207, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(42, 42, 62, 0.95);
+            color: #a8e6cf;
+            margin-top: 50px;
+            border-top: 1px solid rgba(23, 147, 209, 0.3);
+        }
+        
+        .search-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        #search {
+            width: 100%;
+            max-width: 550px;
+            padding: 18px 25px;
+            background: rgba(30, 30, 46, 0.8);
+            border: 2px solid rgba(23, 147, 209, 0.5);
+            border-radius: 30px;
+            font-size: 16px;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+        
+        #search:focus {
+            outline: none;
+            border-color: #1793d1;
+            box-shadow: 0 0 25px rgba(23, 147, 209, 0.5);
+        }
+        
+        #search::placeholder {
+            color: #888;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #4fc3f7, #1793d1);
+            color: #000;
+            font-weight: bold;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        
+        .arch-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1793d1, #1368a0);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        .python-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3776ab, #306998);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        .system-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        .dev-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                margin-right: 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Efectos especiales */
+        .terminal-effect {
+            position: relative;
+        }
+        
+        .terminal-effect::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #1793d1;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* Scrollbar personalizado */
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 30, 46, 0.8);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #1793d1, #1368a0);
+            border-radius: 8px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #1368a0, #0f4d7a);
+        }
+        
+        /* Índice mejorado */
+        .index-item {
+            margin-bottom: 15px;
+            padding: 12px 18px;
+            background: rgba(42, 42, 62, 0.8);
+            border-radius: 8px;
+            border-left: 4px solid #1793d1;
+            transition: all 0.3s ease;
+        }
+        
+        .index-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(23, 147, 209, 0.2);
+        }
+        
+        .index-link {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+        }
+        
+        .index-link:hover {
+            color: #1793d1;
+        }
+
+        /* Notas y advertencias */
+        .note {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #fcd34d;
+        }
+
+        .warning {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+        }
+
+        .info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #93c5fd;
+        }
+
+        /* Grid para librerías Python */
+        .python-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .python-lib {
+            background: rgba(42, 42, 62, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3776ab;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .python-lib code {
+            background: rgba(55, 118, 171, 0.1);
+            color: #3776ab;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .lib-desc {
+            color: #a8e6cf;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Arch Linux/Manjaro <span class="arch-icon">⌬</span> Commands</h1>
+            <p class="subtitle">Manual completo de instalación y administración para Arch-based systems</p>
+        </header>
+        
+        <nav>
+            <div class="nav-container">
+                <a href="#sistema" class="nav-item">Sistema</a>
+                <a href="#desarrollo" class="nav-item">Desarrollo</a>
+                <a href="#herramientas" class="nav-item">Herramientas</a>
+                <a href="#multimedia" class="nav-item">Multimedia</a>
+                <a href="#python" class="nav-item">Python</a>
+                <a href="#redes" class="nav-item">Redes</a>
+            </div>
+        </nav>
+        
+        <div class="search-container">
+            <input type="text" id="search" placeholder="user@arch:~$ Buscar comandos de pacman...">
+        </div>
+        
+        <main>
+            <div class="sidebar">
+                <h2>Índice de Categorías</h2>
+                <div id="index-list">
+                    <!-- El índice se generará automáticamente con JavaScript -->
+                </div>
+            </div>
+            
+            <div class="content" id="content">
+                <!-- Gestión del Sistema -->
+                <div class="category" id="sistema">
+                    <h2>Gestión del Sistema <span class="system-badge">SYSTEM</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo pacman -Syu</code>
+                        <div class="command-desc">Actualizar sistema y paquetes</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo pacman -Syu && yay -Syu</code>
+                        <div class="command-desc">Actualizar sistema y paquetes AUR</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -Sc</code>
+                        <div class="command-desc">Limpiar cache de paquetes</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -Qdtq | pacman -Rs -</code>
+                        <div class="command-desc">Remover dependencias huérfanas</div>
+                    </div>
+
+                    <div class="command">
+                        <code>pamac list -o</code>
+                        <div class="command-desc">Verificar paquetes huérfanos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>pamac remove -o</code>
+                        <div class="command-desc">Remover paquetes huérfanos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -Rns &lt;nomb_paquete&gt;</code>
+                        <div class="command-desc">Quitar paquete y dependencias</div>
+                    </div>
+
+                    <div class="command">
+                        <code>pamac upgrade &lt;nomb_paquete&gt;</code>
+                        <div class="command-desc">Actualizar paquete específico</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -Syu &lt;nomb_paquete&gt;</code>
+                        <div class="command-desc">Instalar paquete específico</div>
+                    </div>
+
+                    <div class="command">
+                        <code>uname -r</code>
+                        <div class="command-desc">Mostrar versión del kernel</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman-key --refresh-keys</code>
+                        <div class="command-desc">Refrescar llaves GPG</div>
+                    </div>
+
+                    <div class="warning">
+                        ⚠️ <strong>Error de base de datos:</strong> 
+                        <code>sudo rm -f /var/lib/pacman/sync/* && sudo pacman-mirrors --continent && sudo pacman -Syyu</code>
+                        <br>Este error se origina al usar el gestor de actualizaciones gráfico.
+                    </div>
+                </div>
+
+                <!-- Desarrollo y Programación -->
+                <div class="category" id="desarrollo">
+                    <h2>Desarrollo y Programación <span class="dev-badge">DEV</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo pacman -S php php-sqlite</code>
+                        <div class="command-desc">Instalar PHP con soporte SQLite</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S sqlite</code>
+                        <div class="command-desc">Instalar SQLite</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S php</code>
+                        <div class="command-desc">Instalar PHP</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S python-pip</code>
+                        <div class="command-desc">Instalar pip para Python</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S git</code>
+                        <div class="command-desc">Instalar Git</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S base-devel</code>
+                        <div class="command-desc">Instalar herramientas de desarrollo</div>
+                    </div>
+
+                    <div class="command">
+                        <code>makepkg -s PKGBUILD</code>
+                        <div class="command-desc">Obtener paquetes y construir dependencias</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S docker</code>
+                        <div class="command-desc">Instalar Docker</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S wine mingw-w64-gcc</code>
+                        <div class="command-desc">Instalar Wine y MinGW</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S git-lfs</code>
+                        <div class="command-desc">Instalar Git LFS</div>
+                        <div class="sub-command">
+                            <code>git lfs install</code> - Iniciar LFS en el directorio
+                        </div>
+                        <div class="sub-command">
+                            <code>git lfs track "*.fileextension"</code> - Trackear tipos de archivo
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas de Sistema -->
+                <div class="category" id="herramientas">
+                    <h2>Herramientas del Sistema <span class="arch-badge">TOOLS</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo pacman -S iftop</code>
+                        <div class="command-desc">Monitor de red en tiempo real</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S traceroute</code>
+                        <div class="command-desc">Herramienta de diagnóstico de red</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S ethtool</code>
+                        <div class="command-desc">Utilidad para configuración de Ethernet</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S tree</code>
+                        <div class="command-desc">Mostrar directorios en forma de árbol</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S p7zip</code>
+                        <div class="command-desc">Compresor/descompresor 7z</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S nikto</code>
+                        <div class="command-desc">Escáner de seguridad web</div>
+                    </div>
+
+                    <div class="command">
+                        <code>yay -S netdiscover</code>
+                        <div class="command-desc">Descubrimiento de red</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S figlet</code>
+                        <div class="command-desc">Crear banners ASCII</div>
+                        <div class="sub-command">
+                            <code>figlet &lt;cadena&gt;</code> - Muestra cadena en la terminal
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S nano</code>
+                        <div class="command-desc">Editor de texto simple</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S ufw</code>
+                        <div class="command-desc">Firewall sin complicaciones</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S ssdeep</code>
+                        <div class="command-desc">Herramienta de fuzzy hashing</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S cowsay</code>
+                        <div class="command-desc">Vaca que habla</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S dkms</code>
+                        <div class="command-desc">Sistema de gestión de módulos del kernel</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S filezilla</code>
+                        <div class="command-desc">Cliente FTP</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S ventoy</code>
+                        <div class="command-desc">Crear USB booteable</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S whois</code>
+                        <div class="command-desc">Información de dominios</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S neofetch</code>
+                        <div class="command-desc">Info del sistema con estilo</div>
+                        <div class="sub-command">
+                            <code>sudo snap install neofetch-desktop</code> - Versión alternativa
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S bleachbit</code>
+                        <div class="command-desc">Limpiador del sistema</div>
+                    </div>
+
+                    <div class="command">
+                        <code>pamac install espeak</code>
+                        <div class="command-desc">Síntesis de voz</div>
+                    </div>
+                </div>
+
+                <!-- Python y Librerías -->
+                <div class="category" id="python">
+                    <h2>Python y Librerías <span class="python-badge">PYTHON</span></h2>
+                    
+                    <div class="command">
+                        <code>pip install &lt;nombre_libreria&gt; --break-system-packages</code>
+                        <div class="command-desc">Instalar librerías Python</div>
+                    </div>
+
+                    <h3>Librerías Principales</h3>
+                    <div class="python-grid">
+                        <div class="python-lib">
+                            <code>pip install pandas --break-system-packages</code>
+                            <div class="lib-desc">Análisis de datos</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install numpy --break-system-packages</code>
+                            <div class="lib-desc">Cálculos numéricos</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install matplotlib --break-system-packages</code>
+                            <div class="lib-desc">Visualización</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install seaborn --break-system-packages</code>
+                            <div class="lib-desc">Gráficos estadísticos</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install plotly --break-system-packages</code>
+                            <div class="lib-desc">Gráficos interactivos</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install scikit-learn --break-system-packages</code>
+                            <div class="lib-desc">Machine Learning</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install pygame --break-system-packages</code>
+                            <div class="lib-desc">Desarrollo de juegos</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install flask --break-system-packages</code>
+                            <div class="lib-desc">Framework web</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install django --break-system-packages</code>
+                            <div class="lib-desc">Framework web completo</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install tensorflow --break-system-packages</code>
+                            <div class="lib-desc">Deep Learning</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install opencv-python --break-system-packages</code>
+                            <div class="lib-desc">Visión por computadora</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install jupyter --break-system-packages</code>
+                            <div class="lib-desc">Notebooks interactivos</div>
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>pip list --outdated | cut -d = -f 1 | xargs -n1 pip install -U --break-system-packages</code>
+                        <div class="command-desc">Actualizar todas las librerías</div>
+                    </div>
+
+                    <div class="note">
+                        📝 <strong>Nota:</strong> Antes instalar <code>sudo pacman -S python-aifc</code> para dependencias de audio.
+                    </div>
+                </div>
+
+                <!-- Redes y Comunicación -->
+                <div class="category" id="redes">
+                    <h2>Redes y Comunicación <span class="arch-badge">NETWORK</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo pacman -S telegram-desktop</code>
+                        <div class="command-desc">Cliente Telegram</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install teams-for-linux</code>
+                        <div class="command-desc">Microsoft Teams</div>
+                    </div>
+
+                    <div class="command">
+                        <code>git clone https://aur.archlinux.org/whatsapp-for-linux.git</code>
+                        <div class="command-desc">Instalar WhatsApp</div>
+                        <div class="sub-command">
+                            <code>cd whatsapp-for-linux && makepkg -is</code>
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo snap install whatsapp-linux-app</code> - Versión estable
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S gns3-server gns3-gui</code>
+                        <div class="command-desc">Simulador de redes</div>
+                    </div>
+                </div>
+
+                <!-- Multimedia y Gráficos -->
+                <div class="category" id="multimedia">
+                    <h2>Multimedia y Gráficos <span class="arch-badge">MEDIA</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo pacman -S gimp</code>
+                        <div class="command-desc">Editor de imágenes</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S shotcut</code>
+                        <div class="command-desc">Editor de video</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S kdenlive</code>
+                        <div class="command-desc">Editor de video profesional</div>
+                    </div>
+
+                    <div class="command">
+                        <code>flatpak install flathub com.obsproject.Studio</code>
+                        <div class="command-desc">OBS Studio</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S brasero</code>
+                        <div class="command-desc">Grabador de discos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S gnome-screenshot</code>
+                        <div class="command-desc">Captura de pantalla GNOME</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S xfce4-screenshooter</code>
+                        <div class="command-desc">Captura de pantalla XFCE</div>
+                    </div>
+                </div>
+
+                <!-- IDEs y Editores -->
+                <div class="category" id="ides">
+                    <h2>IDEs y Editores <span class="dev-badge">IDE</span></h2>
+                    
+                    <div class="command">
+                        <code>yay -S visual-studio-code-bin</code>
+                        <div class="command-desc">Visual Studio Code</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install notepad-plus-plus</code>
+                        <div class="command-desc">Notepad++</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install atom-fusion --beta</code>
+                        <div class="command-desc">Atom Editor</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S netbeans</code>
+                        <div class="command-desc">NetBeans IDE</div>
+                    </div>
+
+                    <div class="command">
+                        <code>yay -S sublime-text</code>
+                        <div class="command-desc">Sublime Text</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install android-studio --classic</code>
+                        <div class="command-desc">Android Studio</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S gedit</code>
+                        <div class="command-desc">Editor GNOME</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S leafpad</code>
+                        <div class="command-desc">Editor simple</div>
+                    </div>
+                </div>
+
+                <!-- Virtualización -->
+                <div class="category" id="virtualizacion">
+                    <h2>Virtualización <span class="system-badge">VIRTUAL</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo pacman -S virtualbox</code>
+                        <div class="command-desc">VirtualBox</div>
+                    </div>
+
+                    <div class="command">
+                        <code>yay -S --noconfirm --needed vmware-workstation</code>
+                        <div class="command-desc">VMware Workstation</div>
+                    </div>
+
+                    <div class="warning">
+                        ⚠️ <strong>VirtualBox Nov 2024:</strong> Problemas con kernel, usar kernel no tan reciente.
+                        <code>sudo pacman -Syu virtualbox linux610-virtualbox-host-modules</code>
+                    </div>
+                </div>
+
+                <!-- Utilidades de Sistema -->
+                <div class="category" id="utilidades">
+                    <h2>Utilidades de Sistema <span class="system-badge">UTILS</span></h2>
+                    
+                    <div class="command">
+                        <code>yay -S stacer</code>
+                        <div class="command-desc">Optimizador del sistema</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S ark</code>
+                        <div class="command-desc">Gestor de archivos comprimidos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S gnome-disk-utility</code>
+                        <div class="command-desc">Utilidad de discos GNOME</div>
+                    </div>
+
+                    <div class="command">
+                        <code>yay -S nwipe</code>
+                        <div class="command-desc">Borrado seguro de discos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S testdisk</code>
+                        <div class="command-desc">Recuperación de datos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S clonezilla</code>
+                        <div class="command-desc">Clonación de discos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pacman -S veracrypt</code>
+                        <div class="command-desc">Encriptación de discos</div>
+                    </div>
+                </div>
+
+                <!-- Recursos y Enlaces -->
+                <div class="category" id="recursos">
+                    <h2>Recursos y Enlaces <span class="arch-badge">RESOURCES</span></h2>
+                    
+                    <div class="command">
+                        <code>https://snapcraft.io/</code>
+                        <div class="command-desc">Busqueda de snaps</div>
+                    </div>
+
+                    <div class="command">
+                        <code>https://www.xfce-look.org/browse?cat=132&ord=latest</code>
+                        <div class="command-desc">Iconos para escritorio</div>
+                    </div>
+
+                    <div class="command">
+                        <code>https://icons8.com/icons/set/start-button</code>
+                        <div class="command-desc">Iconos de botón inicio</div>
+                    </div>
+
+                    <div class="command">
+                        <code>https://www.wallpaperflare.com/search?wallpaper=minimalist</code>
+                        <div class="command-desc">Wallpapers minimalistas</div>
+                    </div>
+
+                    <div class="command">
+                        <code>/usr/share/icons</code>
+                        <div class="command-desc">Ruta de instalación de iconos</div>
+                    </div>
+
+                    <div class="info">
+                        💡 <strong>Recordar:</strong> Habilitar el cortafuegos y Timeshift desde la interfaz gráfica.
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Arch Linux/Manjaro Commands Manual &copy; 2024 - Rolling Release Distribution</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #1793d1;">Keep it Simple, Keep it Rolling</p>
+        </footer>
+    </div>
+
+    <script>
+        // Generar índice automáticamente
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = document.querySelectorAll('.category');
+            const indexList = document.getElementById('index-list');
+            
+            categories.forEach(category => {
+                const categoryId = category.id;
+                const categoryTitle = category.querySelector('h2').textContent;
+                
+                const listItem = document.createElement('div');
+                listItem.className = 'index-item';
+                
+                const link = document.createElement('a');
+                link.href = `#${categoryId}`;
+                
+                // Iconos diferentes para cada categoría
+                let icon = '⚙️';
+                if (categoryId === 'desarrollo') icon = '💻';
+                else if (categoryId === 'herramientas') icon = '🔧';
+                else if (categoryId === 'python') icon = '🐍';
+                else if (categoryId === 'redes') icon = '🌐';
+                else if (categoryId === 'multimedia') icon = '🎬';
+                else if (categoryId === 'ides') icon = '📝';
+                else if (categoryId === 'virtualizacion') icon = '💻';
+                else if (categoryId === 'utilidades') icon = '🛠️';
+                else if (categoryId === 'recursos') icon = '📚';
+                
+                link.textContent = `${icon} ${categoryTitle.replace('SYSTEM', '').replace('DEV', '').replace('TOOLS', '').replace('PYTHON', '').replace('NETWORK', '').replace('MEDIA', '').replace('IDE', '').replace('VIRTUAL', '').replace('UTILS', '').replace('RESOURCES', '').trim()}`;
+                link.className = 'index-link';
+                
+                listItem.appendChild(link);
+                indexList.appendChild(listItem);
+            });
+            
+            // Funcionalidad de búsqueda
+            const searchInput = document.getElementById('search');
+            const commands = document.querySelectorAll('.command');
+            const pythonLibs = document.querySelectorAll('.python-lib');
+            const notes = document.querySelectorAll('.note, .warning, .info');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                commands.forEach(command => {
+                    const commandText = command.textContent.toLowerCase();
+                    const commandCode = command.querySelector('code');
+                    
+                    // Remover resaltado anterior
+                    if (commandCode) {
+                        commandCode.innerHTML = commandCode.textContent;
+                    }
+                    
+                    if (searchTerm === '') {
+                        command.style.display = 'block';
+                    } else if (commandText.includes(searchTerm)) {
+                        command.style.display = 'block';
+                        
+                        // Resaltar término de búsqueda
+                        if (commandCode) {
+                            const regex = new RegExp(searchTerm, 'gi');
+                            commandCode.innerHTML = commandCode.textContent.replace(regex, match => 
+                                `<span class="highlight">${match}</span>`
+                            );
+                        }
+                    } else {
+                        command.style.display = 'none';
+                    }
+                });
+
+                // Buscar en librerías Python
+                pythonLibs.forEach(lib => {
+                    const libText = lib.textContent.toLowerCase();
+                    const libCode = lib.querySelector('code');
+                    
+                    // Remover resaltado anterior
+                    if (libCode) {
+                        libCode.innerHTML = libCode.textContent;
+                    }
+                    
+                    if (searchTerm === '') {
+                        lib.style.display = 'block';
+                    } else if (libText.includes(searchTerm)) {
+                        lib.style.display = 'block';
+                        
+                        // Resaltar término de búsqueda
+                        if (libCode) {
+                            const regex = new RegExp(searchTerm, 'gi');
+                            libCode.innerHTML = libCode.textContent.replace(regex, match => 
+                                `<span class="highlight">${match}</span>`
+                            );
+                        }
+                    } else {
+                        lib.style.display = 'none';
+                    }
+                });
+
+                // Buscar en notas y advertencias
+                notes.forEach(note => {
+                    const noteText = note.textContent.toLowerCase();
+                    
+                    if (searchTerm === '') {
+                        note.style.display = 'block';
+                    } else if (noteText.includes(searchTerm)) {
+                        note.style.display = 'block';
+                    } else {
+                        note.style.display = 'none';
+                    }
+                });
+            });
+
+            // Efecto de terminal en la búsqueda
+            searchInput.placeholder = "user@arch:~$ Buscar comandos de pacman...";
+        });
+
+        // Efecto de escritura en el título
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('h1');
+            title.classList.add('terminal-effect');
+        });
+    </script>
+</body>
+</html>
