@@ -299,6 +299,7 @@ pip install sigit --break-system-packages
 pip install SpeechRecognition==3.4.3 --break-system-packages
 pip install pathlib --break-system-packages
 pip install net-tools --break-system-packages
+pip install vedo --break-system-packages
 --- Nota: 
 ---- Antes instalar la siguiente dependencia: sudo pacman -S python-aifc
 
