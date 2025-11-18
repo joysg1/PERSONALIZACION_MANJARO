@@ -303,6 +303,7 @@ pip install vedo --break-system-packages
 pip install pyvista --break-system-packages
 pip install mayavi --break-system-packages
 pip install scienceplots --break-system-packages
+pip install flask-cors --break-system-packages
 
 --- Nota: 
 ---- Antes instalar la siguiente dependencia: sudo pacman -S python-aifc
