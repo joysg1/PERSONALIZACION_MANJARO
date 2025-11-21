@@ -305,6 +305,7 @@ pip install mayavi --break-system-packages
 pip install scienceplots --break-system-packages
 pip install flask-cors --break-system-packages
 pip install joblib --break-system-packages
+pip install Werkzeug --break-system-packages
 
 
 --- Nota: 
